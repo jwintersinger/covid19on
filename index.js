@@ -3,6 +3,8 @@
 var parseTime = d3.timeParse('%Y-%m-%d');
 
 function _draw_plot(data, svg) {
+  svg.html(null);
+
   var margin = { top: 20, right: 20, bottom: 30, left: 50 };
   var plot = svg.append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
@@ -61,7 +63,7 @@ function _annotate_plot(plot, margin, height, X, Y) {
       y2: height - margin.top - margin.bottom,
     },
     y: margin.top,
-    data: { x: '2020-03-01' },
+    data: { x: '2020-03-12' },
   }];
 
   const ann_type = d3.annotationCustomType(d3.annotationXYThreshold, {
@@ -74,8 +76,8 @@ function _annotate_plot(plot, margin, height, X, Y) {
   const make_anns = d3.annotation()
     .type(ann_type)
     .accessors({
-      x: function(d) { console.log([d, parseTime(d.x), X(parseTime(d.x))]); return X(parseTime(d.x)); },
-      y: d => Y(d.y)
+      x: d => X(parseTime(d.x)),
+      y: d => Y(d.y),
     })
     .annotations(annotations)
     .textWrap(30);
@@ -99,6 +101,7 @@ function init_plot() {
     });
 
     _draw_plot(data, svg);
+    window.addEventListener('resize', function() { _draw_plot(data, svg); });
   });
 }
 
