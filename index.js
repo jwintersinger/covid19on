@@ -20,14 +20,14 @@ function _make_plot(data, svg) {
     return d.date;
   }));
   _y.domain([0, d3.max(data, function (d) {
-    return d.cases;
+    return d.total_cases;
   })]);
 
   var valueline = d3.line().x(function (d) {
     let x = _x(d.date);
     return x;
   }).y(function (d) {
-    let y = _y(d.cases);
+    let y = _y(d.total_cases);
     return y;
   });
 
@@ -61,7 +61,7 @@ function init_plot() {
 
     data.forEach(function (d) {
       d.date = parseTime(d.date);
-      d.cases = +d.cases;
+      d.total_cases = +d.total_cases;
     });
     _make_plot(data, svg);
   });
