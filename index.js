@@ -54,7 +54,7 @@ function _draw_plot(data, svg) {
   const total_steps = data.length;
 
   const reveal = function(step) {
-    const max_y = data[step - 1].total_cases;
+    const max_y = 1.1 * data[step - 1].total_cases;
     yscale.domain([1, max_y]);
     curve.datum(data.slice(0, step))
       .transition()
