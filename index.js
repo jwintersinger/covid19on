@@ -20,7 +20,7 @@ function _draw_plot(data, svg) {
   X.domain(d3.extent(data, function (d) {
     return d.date;
   }));
-  Y.domain([0, d3.max(data, function (d) {
+  Y.domain([1, d3.max(data, function (d) {
     return d.total_cases;
   })]);
 
@@ -40,8 +40,10 @@ function _draw_plot(data, svg) {
     xaxis.ticks(10);
   }
 
-  plot.append('path')
-    .data([data])
+  var yaxis = d3.axisLeft(Y);
+
+  const curve = plot.append('path')
+    .datum(data)
     .attr('class', 'line')
     .attr('d', valueline);
   plot.append('g')
@@ -50,9 +52,26 @@ function _draw_plot(data, svg) {
     .call(xaxis);
   plot.append('g')
     .attr('class', 'axis y')
-    .call(d3.axisLeft(Y));
+    .call(yaxis);
 
   _annotate_plot(plot, margin, svg_height, X, Y);
+
+  const total_len = curve.node().getTotalLength();
+  curve.attr('stroke-dasharray', total_len + ' ' + total_len)
+    .attr('stroke-dashoffset', total_len);
+  const delay = 300;
+  const total_steps = data.length;
+  const reveal = function(step) {
+    curve.transition()
+      .duration(delay)
+      .ease(d3.easeLinear)
+      .attr('stroke-dashoffset', (1 - step/total_steps)*total_len);
+
+    if(step < total_steps) {
+      window.setTimeout(reveal, delay, step+1);
+    }
+  };
+  reveal(1);
 }
 
 function _annotate_plot(plot, margin, height, X, Y) {
