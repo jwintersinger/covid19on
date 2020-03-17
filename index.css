@@ -1,13 +1,12 @@
 :root {
-  --line-chart-color: #c02739;
-  --annotation-context-color: #03dac5;
+  --bg-color: #222831;
+  --line-chart-color: #00adb5;
+  --annotation-context-color: #eeeeee;
+  --axis-color: rgba(255,255,255,0.8);
 }
 
 body {
-  background-color: #121212;
-}
-
-#caseplot {
+  background-color: var(--bg-color);
 }
 
 .line {
@@ -17,7 +16,7 @@ body {
 }
 
 .axis text {
-  fill: rgba(255,255,255,0.6);
+  fill: var(--axis-color);
   font-size: 13px;
 }
 
