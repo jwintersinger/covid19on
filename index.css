@@ -21,7 +21,7 @@ body {
 }
 
 .axis path, .axis line {
-  stroke: var(--line-chart-color);
+  stroke: var(--axis-color);
 }
 
 .annotation path {

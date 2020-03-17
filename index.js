@@ -2,10 +2,22 @@
 
 var parseTime = d3.timeParse('%Y-%m-%d');
 
+function _make_line(X, Y) {
+  const line = d3.line().x(function (d) {
+    let x = X(d.date);
+    return x;
+  }).y(function (d) {
+    let y = Y(d.total_cases);
+    return y;
+  });
+
+  return line;
+}
+
 function _draw_plot(data, svg) {
   svg.html(null);
 
-  var margin = { top: 20, right: 20, bottom: 30, left: 50 };
+  var margin = { top: 20, right: 20, bottom: 60, left: 50 };
   var plot = svg.append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
@@ -14,61 +26,48 @@ function _draw_plot(data, svg) {
   var width = svg_width - margin.left - margin.right;
   var height = svg_height - margin.top - margin.bottom;
 
-  var X = d3.scaleTime().range([0, width]);
-  var Y = d3.scaleLinear().range([height, 0]);
+  var xscale = d3.scaleTime().range([0, width])
+    .domain(d3.extent(data, d => d.date));
+  var yscale = d3.scaleLinear().range([height, 0]);
 
-  X.domain(d3.extent(data, function (d) {
-    return d.date;
-  }));
-  Y.domain([1, d3.max(data, function (d) {
-    return d.total_cases;
-  })]);
-
-  var valueline = d3.line().x(function (d) {
-    let x = X(d.date);
-    return x;
-  }).y(function (d) {
-    let y = Y(d.total_cases);
-    return y;
-  });
-
-  var xaxis = d3.axisBottom(X)
-    .tickFormat(d3.timeFormat('%b %-d'));
-  if(data.length < 5) {
-    xaxis.tickValues(data.map(d => d.date));
-  } else {
-    xaxis.ticks(10);
-  }
-
-  var yaxis = d3.axisLeft(Y);
+  var xaxis = d3.axisBottom(xscale)
+    .tickFormat(d3.timeFormat('%b %-d'))
+    .ticks(8);
 
   const curve = plot.append('path')
-    .datum(data)
-    .attr('class', 'line')
-    .attr('d', valueline);
+    .attr('class', 'line');
   plot.append('g')
     .attr('class', 'axis x')
     .attr('transform', 'translate(0,' + height + ')')
-    .call(xaxis);
-  plot.append('g')
-    .attr('class', 'axis y')
-    .call(yaxis);
+    .call(xaxis)
+    .selectAll('text')
+    .attr('y', 0)
+    .attr('x', 9)
+    .attr('transform', 'rotate(45)')
+    .style('text-anchor', 'start');
+  const yaxis = plot.append('g')
+    .attr('class', 'axis y');
 
-  _annotate_plot(plot, margin, svg_height, X, Y);
+  _annotate_plot(plot, margin, svg_height, xscale, yscale);
 
-  const total_len = curve.node().getTotalLength();
-  curve.attr('stroke-dasharray', total_len + ' ' + total_len)
-    .attr('stroke-dashoffset', total_len);
-  const delay = 300;
+  const delay = 200;
   const total_steps = data.length;
+
   const reveal = function(step) {
-    curve.transition()
+    const max_y = data[step - 1].total_cases;
+    yscale.domain([1, max_y]);
+    curve.datum(data.slice(0, step))
+      .transition()
       .duration(delay)
       .ease(d3.easeLinear)
-      .attr('stroke-dashoffset', (1 - step/total_steps)*total_len);
+      .attr('d', _make_line(xscale, yscale));
+    yaxis.transition()
+      .duration(delay)
+      .ease(d3.easeLinear)
+      .call(d3.axisLeft(yscale));
 
     if(step < total_steps) {
-      window.setTimeout(reveal, delay, step+1);
+      window.setTimeout(reveal, 2*delay, step+1);
     }
   };
   reveal(1);
