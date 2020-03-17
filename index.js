@@ -2,12 +2,17 @@
 
 var parseTime = d3.timeParse('%Y-%m-%d');
 
-var margin = { top: 20, right: 20, bottom: 30, left: 50 },
-    height = 500 - margin.top - margin.bottom;
-var maxWidth = 860 - margin.left - margin.right;
-var width = 860 - margin.left - margin.right;
-
 function _make_plot(data, svg) {
+  var margin = { top: 20, right: 20, bottom: 30, left: 50 };
+  var plot = svg.append('g')
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+  var svg_width = svg.node().getBoundingClientRect().width;
+  var svg_height = svg.node().getBoundingClientRect().height;
+  var width = svg_width - margin.left - margin.right;
+  console.log(svg_height);
+  var height = svg_height - margin.top - margin.bottom;
+
   var _x = d3.scaleTime().range([0, width]);
   var _y = d3.scaleLinear().range([height, 0]);
 
@@ -34,24 +39,22 @@ function _make_plot(data, svg) {
     xaxis.ticks(10);
   }
 
-  svg.append('path')
+  plot.append('path')
     .data([data])
     .attr('class', 'line')
     .attr('d', valueline);
-  svg.append('g')
+  plot.append('g')
     .attr('class', 'x-axis')
     .attr('transform', 'translate(0,' + height + ')')
     .call(xaxis);
-  svg.append('g')
+  plot.append('g')
     .call(d3.axisLeft(_y));
 }
 
 function init_plot() {
   var svg = d3.select('#caseplot')
-    .attr('width', 960)
-    .attr('height', height + margin.top + margin.bottom)
-    .append('g')
-    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    .attr('width', '100%')
+    .attr('height', '100vh');
 
   d3.csv('cases.csv', function (error, data) {
     if (error) throw error;
