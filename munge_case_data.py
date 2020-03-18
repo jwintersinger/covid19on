@@ -15,7 +15,10 @@ def main():
   cases = cases.sort_values(by=['date_report'], ascending=False)
 
   cases = cases[cases['province'] == 'Ontario']
-  cases = cases[cases['date_report'] >= pd.to_datetime('2020-03-01', format='%Y-%m-%d')]
+
+  threshold = pd.to_datetime('2020-03-01', format='%Y-%m-%d')
+  cases_before = cases[cases['date_report'] < threshold]
+  cases = cases[cases['date_report'] >= threshold]
 
   cases_by_date = cases.groupby('date_report').size()
   cases_by_date = cases_by_date.rename_axis('date')
@@ -23,7 +26,7 @@ def main():
 
   cases_by_date = pd.DataFrame({
     'new_cases': cases_by_date,
-    'total_cases': cases_by_date.cumsum(),
+    'total_cases': cases_by_date.cumsum() + len(cases_before),
   })
   cases_by_date.to_csv(args.outfn)
 
