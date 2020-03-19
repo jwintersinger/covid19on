@@ -26,17 +26,17 @@ The Ontario report plays with two main scenarios.
 Both are forms of exponential growth, which is super bad news---think of it like compound interest.
 (Einstein supposedly said that "compound interest is the most powerful force in the universe.") Unlike the ICL report, which explicitly models the effect of different interventions such as closing schools and social distancing, the Ontario report assumes those measures are reflected in the "conservative" 7.5% daily case increase being lower than the "Italy" 33% daily increase.
 
-![Ventilator supply in Ontario according to "Italy" scenario](img/fig1.png)
+![Figure 1: Ventilator supply in Ontario according to "Italy" scenario](img/fig1.png)
 
 This is the critical figure.
-Under the "Italy" growth rate, we hit ventilator capacity in 35 to 42 days.
+Under the "Italy" growth rate, we hit ventilator capacity in 35 to 42 days (fig. 1).
 The figure shows separate curves for scenarios 1 to 3, which reflect the effect of adding a few hundred additional emergency ventilators from ambulances/stockpiles/whatever.
 These additional ventilators don't substantially affect the outcome.
 
-![Ventilator supply in Ontario according to "conservative" scenario](img/fig2.png)
+![Figure 2: Ventilator supply in Ontario according to "conservative" scenario](img/fig2.png)
 
 However, even the "conservative" scenario is super bad.
-This is where we reduce the daily increase in cases to 7.5%, meant to reflect the effect that social distancing is having.
+This is where we reduce the daily increase in cases to 7.5%, meant to reflect the effect that social distancing is having (fig. 2).
 We still run out of ventilators in ~2 months.
 Ultimately, if Ontario gets anything approaching the expected growth in cases, we're screwed.
 This is true for every health system in the world, because it's the consequence of exponential growth.
@@ -44,10 +44,10 @@ While people are looking at means of rapidly building new ventilators, or hookin
 
 Imperial College of London report
 ---------------------------------
-The ICL report considers five possible interventions, such as isolating affected people or closing schools and universities.
 
-![Possible social interventions](img/fig3.png)
+![Figure 3: Possible social interventions](img/fig3.png)
 
+The ICL report considers five possible interventions, such as isolating affected people or closing schools and universities (fig. 3).
 The report starts by considering "mitigation" strategies.
 These are in contrast to "suppression." "Mitigation" tries to make the outbreak less severe while avoiding the most invasive social measures, such as months-long social distancing by everyone.
 Under "mitigation," the average infected person still infects more than one other person.
@@ -58,27 +58,27 @@ Life won't return to normal under a vaccine is developed, produced, and deployed
 "Suppression," by contrast, takes more invasive measures to reduce the number of infections seeded by each infected person to less than one.
 The conclusion of the report is, ultimately, that suppression will be necessary---mitigation is nowhere close to enough to avoid overwhelming the health system.
 
-![Intervention effect through time in Great Britain](img/fig4.png)
+![Figure 4: Intervention effect through time in Great Britain](img/fig4.png)
 
-This figure shows just how insufficient "mitigation" is.
+This figure shows just how insufficient "mitigation" is (fig. 4).
 The red line is the number of ICU beds in Great Britain.
 The blue line is the most optimistic scenario, showing what happens if, for the rest of the disease course, we isolate all infected people at home, we quarantine for two weeks entire households of people whenever one family member is infected, and we practice social distancing for everyone over age 70.
 You can see that, by early June, Britain would still exceed its ICU bed capacity by 40 times.
 This is insane.
 
 
-![Intervention effect through time in Great Britain](img/fig5.png)
+![Figure 5: Intervention effect through time in Great Britain](img/fig5.png)
 
-Now, here's what happens if Britain pursues a more aggressive "suppression" strategy.
+Now, here's what happens if Britain pursues a more aggressive "suppression" strategy (fig. 5).
 If we keep schools and universities closed, isolate all cases at home, and practice social distancing across the entire population (not just for the over-70 crowd), then we can avoid overwhelming the healthcare system---that's what the green line shows.
 You can see that it stays under the red line.
 You can mix-and-match strategies---suppose that you let schools and universities reopen, and instead you force families to quarantine at home for two weeks once a family member is diagnosed.
 In that case, you "only" exceed ICU bed capacity by a factor of 2, which is what the orange line shows.
 
-![Intervention effect over longer time period in Great Britain](img/fig6.png)
+![Figure 6: Intervention effect over longer time period in Great Britain](img/fig6.png)
 
 But here's the critical part: I didn't show you the whole plot.
-The blue shaded region is showing you the period for which the suppression strategies are maintained.
+The blue shaded region is showing you the period for which the suppression strategies are maintained (fig. 6).
 If you maintain these measures all spring and summer, right out to September, then, so long as schools are closed (which they probably will be in Canada), you're okay.
 But if you resume normal life in September, you're still royally screwed---you're just screwed later.
 You delay the apocalypse by 8 or 9 months, but because no one has developed immunity, you really don't do any better than if you just did nothing today.
@@ -96,9 +96,9 @@ That's to say nothing of what it would do to the healthcare system---mortality f
 One answer is we maintain suppression measures for the next 12-18 months, until a vaccine appears.
 That would mean schools shut, universities shut, restaurants closed, and everyone that possibly can works from home, for the next 12-18 months.
 
-![Pulsed "on-off" suppression strategy and its effect on severe COVID-19 cases](img/fig7.png)
+![Figure 7: Pulsed "on-off" suppression strategy and its effect on severe COVID-19 cases](img/fig7.png)
 
-But there's also another choice: we pursue "on-off" suppression, where we relax suppression measures in July, and then we only reinstate those measures when the number of cases starts to increase again.
+But there's also another choice: we pursue "on-off" suppression, where we relax suppression measures in July, and then we only reinstate those measures when the number of cases starts to increase again (fig. 7).
 In this figure, the blue boxes show you what periods of time the suppressive measures are in effect.
 Specifically, those measures include all four interventions---case isolation, household quarantine, school/university closures, and social distancing by the whole population.
 
