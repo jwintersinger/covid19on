@@ -57,13 +57,17 @@ Life won't return to normal under a vaccine is developed, produced, and deployed
 
 "Suppression," by contrast, takes more invasive measures to reduce the number of infections seeded by each infected person to less than one.
 The conclusion of the report is, ultimately, that suppression will be necessary---mitigation is nowhere close to enough to avoid overwhelming the health system.
+
+![Intervention effect through time in Great Britain](img/fig4.png)
+
 This figure shows just how insufficient "mitigation" is.
 The red line is the number of ICU beds in Great Britain.
 The blue line is the most optimistic scenario, showing what happens if, for the rest of the disease course, we isolate all infected people at home, we quarantine for two weeks entire households of people whenever one family member is infected, and we practice social distancing for everyone over age 70.
 You can see that, by early June, Britain would still exceed its ICU bed capacity by 40 times.
 This is insane.
 
-![Intervention effect through time in Great Britain](img/fig4.png)
+
+![Intervention effect through time in Great Britain](img/fig5.png)
 
 Now, here's what happens if Britain pursues a more aggressive "suppression" strategy.
 If we keep schools and universities closed, isolate all cases at home, and practice social distancing across the entire population (not just for the over-70 crowd), then we can avoid overwhelming the healthcare system---that's what the green line shows.
@@ -71,7 +75,7 @@ You can see that it stays under the red line.
 You can mix-and-match strategies---suppose that you let schools and universities reopen, and instead you force families to quarantine at home for two weeks once a family member is diagnosed.
 In that case, you "only" exceed ICU bed capacity by a factor of 2, which is what the orange line shows.
 
-![Intervention effect over longer time period in Great Britain](img/fig5.png)
+![Intervention effect over longer time period in Great Britain](img/fig6.png)
 
 But here's the critical part: I didn't show you the whole plot.
 The blue shaded region is showing you the period for which the suppression strategies are maintained.
@@ -92,7 +96,7 @@ That's to say nothing of what it would do to the healthcare system---mortality f
 One answer is we maintain suppression measures for the next 12-18 months, until a vaccine appears.
 That would mean schools shut, universities shut, restaurants closed, and everyone that possibly can works from home, for the next 12-18 months.
 
-![Pulsed "on-off" suppression strategy and its effect on severe COVID-19 cases](img/fig5.png)
+![Pulsed "on-off" suppression strategy and its effect on severe COVID-19 cases](img/fig7.png)
 
 But there's also another choice: we pursue "on-off" suppression, where we relax suppression measures in July, and then we only reinstate those measures when the number of cases starts to increase again.
 In this figure, the blue boxes show you what periods of time the suppressive measures are in effect.
