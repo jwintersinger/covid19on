@@ -10,7 +10,7 @@ There are two good reports relevant to COVID-19's impact on Ontario.
 
 2. [Report from a bunch of UofT/UHN/Sunnybrook people](https://www.covid-19-mc.ca/). This came out last night (Mar. 18th). It's not sophisticated as the ICL report, but it's specific to Ontario.
 
-Both reports take a similar approach -- they model the behaviour of individual patients, seeing how the number of infections changes over time and how it compares to health care system capacity.
+Both reports take a similar approach---they model the behaviour of individual patients, seeing how the number of infections changes over time and how it compares to health care system capacity.
 The ICL approach is more sophisticated because they model how different kinds of interventions (social distancing, etc.) change things through time.
 
 Ontario report
@@ -18,12 +18,12 @@ Ontario report
 
 I'll start with the Ontario report.
 Based on how COVID-19 has impacted other countries to date, they assume that 19% of infected people have severe cases requiring hospitalization; one-quarter of those go into the ICU because they're especially bad; and half of those ICU cases need ventilators.
-Ventilator capacity is the limiting factor everywhere -- this study assumes 1300 ventilators in Ontario, but depending on who you ask, it may be up to 2000.
+Ventilator capacity is the limiting factor everywhere---this study assumes 1300 ventilators in Ontario, but depending on who you ask, it may be up to 2000.
 Of course, many of those are already in use for existing patients.
 
 The Ontario report plays with two main scenarios.
 "Italy" is where the number of cases increases 33% each day, similar to what we've seen in Italy and elsewhere in the West before mitigation measures were enacted; "conservative" is where the number of cases increased by 7.5% each day.
-Both are forms of exponential growth, which is super bad news -- think of it like compound interest.
+Both are forms of exponential growth, which is super bad news---think of it like compound interest.
 (Einstein supposedly said that "compound interest is the most powerful force in the universe.") Unlike the ICL report, which explicitly models the effect of different interventions such as closing schools and social distancing, the Ontario report assumes those measures are reflected in the "conservative" 7.5% daily case increase being lower than the "Italy" 33% daily increase.
 
 ![Ventilator supply in Ontario according to "Italy" scenario](img/fig1.png)
@@ -56,7 +56,7 @@ However, the time horizon for a vaccine is 12-18 months.
 Life won't return to normal under a vaccine is developed, produced, and deployed en masse, but this likely won't happen soon.
 
 "Suppression," by contrast, takes more invasive measures to reduce the number of infections seeded by each infected person to less than one.
-The conclusion of the report is, ultimately, that suppression will be necessary -- mitigation is nowhere close to enough to avoid overwhelming the health system.
+The conclusion of the report is, ultimately, that suppression will be necessary---mitigation is nowhere close to enough to avoid overwhelming the health system.
 This figure shows just how insufficient "mitigation" is.
 The red line is the number of ICU beds in Great Britain.
 The blue line is the most optimistic scenario, showing what happens if, for the rest of the disease course, we isolate all infected people at home, we quarantine for two weeks entire households of people whenever one family member is infected, and we practice social distancing for everyone over age 70.
@@ -66,9 +66,9 @@ This is insane.
 ![Intervention effect through time in Great Britain](img/fig4.png)
 
 Now, here's what happens if Britain pursues a more aggressive "suppression" strategy.
-If we keep schools and universities closed, isolate all cases at home, and practice social distancing across the entire population (not just for the over-70 crowd), then we can avoid overwhelming the healthcare system -- that's what the green line shows.
+If we keep schools and universities closed, isolate all cases at home, and practice social distancing across the entire population (not just for the over-70 crowd), then we can avoid overwhelming the healthcare system---that's what the green line shows.
 You can see that it stays under the red line.
-You can mix-and-match strategies -- suppose that you let schools and universities reopen, and instead you force families to quarantine at home for two weeks once a family member is diagnosed.
+You can mix-and-match strategies---suppose that you let schools and universities reopen, and instead you force families to quarantine at home for two weeks once a family member is diagnosed.
 In that case, you "only" exceed ICU bed capacity by a factor of 2, which is what the orange line shows.
 
 ![Intervention effect over longer time period in Great Britain](img/fig5.png)
@@ -76,7 +76,7 @@ In that case, you "only" exceed ICU bed capacity by a factor of 2, which is what
 But here's the critical part: I didn't show you the whole plot.
 The blue shaded region is showing you the period for which the suppression strategies are maintained.
 If you maintain these measures all spring and summer, right out to September, then, so long as schools are closed (which they probably will be in Canada), you're okay.
-But if you resume normal life in September, you're still royally screwed -- you're just screwed later.
+But if you resume normal life in September, you're still royally screwed---you're just screwed later.
 You delay the apocalypse by 8 or 9 months, but because no one has developed immunity, you really don't do any better than if you just did nothing today.
 We probably don't have a vaccine in 9 months, so, yeah, we're screwed if we do this.
 
@@ -87,7 +87,7 @@ So, what's the answer? How do we avoid the apocalypse? The ICL study gives an in
 If you go with what Angela Merkel said a few days ago, where she sees 70% of Germans becoming infected, that means we'd see somewhere around 250,000 dead Canadians if we did nothing.
 (So, that's like removing Saskatoon from the map.) You can see that temporary measures that are relaxed in a few months aren't that much better than just doing nothing.
 Of course, that's 250k dead just from COVID.
-That's to say nothing of what it would do to the healthcare system -- mortality from every other condition would rise massively, since the health system would collapse under the weight of all this.
+That's to say nothing of what it would do to the healthcare system---mortality from every other condition would rise massively, since the health system would collapse under the weight of all this.
 
 One answer is we maintain suppression measures for the next 12-18 months, until a vaccine appears.
 That would mean schools shut, universities shut, restaurants closed, and everyone that possibly can works from home, for the next 12-18 months.
@@ -96,7 +96,7 @@ That would mean schools shut, universities shut, restaurants closed, and everyon
 
 But there's also another choice: we pursue "on-off" suppression, where we relax suppression measures in July, and then we only reinstate those measures when the number of cases starts to increase again.
 In this figure, the blue boxes show you what periods of time the suppressive measures are in effect.
-Specifically, those measures include all four interventions -- case isolation, household quarantine, school/university closures, and social distancing by the whole population.
+Specifically, those measures include all four interventions---case isolation, household quarantine, school/university closures, and social distancing by the whole population.
 
 This is still going to do massive economic harm.
 You can see that those measures are in effect for roughly two-thirds of the time, and relaxed for only one-third of the time.
@@ -115,7 +115,7 @@ Conclusion
 This is the biggest public health challenge since the 1918 influenza epidemic.
 It's the biggest challenge our generation has faced, and the biggest for our parents' generation as well.
 Globally, this will be the most disruptive event to happen since World War II.
-This is not an existential threat to Western society -- collectively, we'll get through this.
+This is not an existential threat to Western society---collectively, we'll get through this.
 But until a vaccine is deployed across the whole population, these will be interesting times.
 
 Ontario's diagnosed COVID-19 cases per day
