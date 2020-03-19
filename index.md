@@ -8,7 +8,7 @@ There are two good reports relevant to COVID-19's impact on Ontario.
 
 1. [Report from Imperial College of London (ICL)](https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf). This came out on Monday (Mar. 16th). It's a sophisticated, robust analysis that's specific to Great Britain and the US, but the general conclusions hold equally well for Canada & Ontario.
 
-2. [Report from a bunch of UofT/UHN/Sunnybrook people](https://www.covid-19-mc.ca/). This came out last night (Mar. 18th). It's not sophisticated as the ICL report, but it's specific to Ontario.
+2. [Report from a bunch of UofT/UHN/Sunnybrook people](https://www.covid-19-mc.ca/). This came out last night (Mar. 18th). It's not as sophisticated as the ICL report, but it's specific to Ontario.
 
 Both reports take a similar approach---they model the behaviour of individual patients, seeing how the number of infections changes over time and how it compares to health care system capacity.
 The ICL approach is more sophisticated because they model how different kinds of interventions (social distancing, etc.) change things through time.
